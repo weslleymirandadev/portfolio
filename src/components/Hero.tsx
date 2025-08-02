@@ -82,7 +82,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 border-2 border-aero text-aero rounded-full font-semibold hover:bg-aero hover:text-white transition-all duration-300"
+            className="px-8 py-4 border-2 border-[var(--french-blue)] text-[var(--french-blue)] rounded-full font-semibold hover:bg-[var(--french-blue)] hover:text-white transition-all duration-300"
           >
             {t.hero.contact}
           </a>

@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --french-blue: #1c77c3ff;
+  --picton-blue: #39a9dbff;
+  --aero: #40bcd8ff;
+  --carrot-orange: #f39237ff;
+  --persian-red: #d63230ff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-black text-white overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: linear-gradient(90deg, var(--persian-red), var(--carrot-orange), var(--aero), var(--picton-blue), var(--french-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border-b border-white/20;
+  }
+  
+  /* Efeito de fundo escuro com blur para seções ativas */
+  .section-active-bg {
+    @apply bg-black/40 backdrop-blur-sm;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .section-active-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@layer utilities {
+  .bg-french-blue { background-color: var(--french-blue); }
+  .bg-picton-blue { background-color: var(--picton-blue); }
+  .bg-aero { background-color: var(--aero); }
+  .bg-carrot-orange { background-color: var(--carrot-orange); }
+  .bg-persian-red { background-color: var(--persian-red); }
+  .text-french-blue { color: var(--french-blue); }
+  .text-picton-blue { color: var(--picton-blue); }
+  .text-aero { color: var(--aero); }
+  .text-carrot-orange { color: var(--carrot-orange); }
+  .text-persian-red { color: var(--persian-red); }
+  .border-french-blue { border-color: var(--french-blue); }
+  .border-picton-blue { border-color: var(--picton-blue); }
+  .border-aero { border-color: var(--aero); }
+  .border-carrot-orange { border-color: var(--carrot-orange); }
+  .border-persian-red { border-color: var(--persian-red); }
+}

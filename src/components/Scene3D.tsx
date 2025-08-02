@@ -279,7 +279,6 @@ export default function Scene3D() {
 
   // Calcular posição da câmera baseada no scroll
   const baseZ = 8
-  const maxZoomOut = 50 // Distância máxima da câmera
   const cameraZ = baseZ + (scrollY * 0.01) // Movimento suave para trás
 
   return (

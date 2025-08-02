@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useSectionActive } from "../hooks/useSectionActive";
 import emailjs from "@emailjs/browser";
@@ -13,7 +13,7 @@ const MySwal = withReactContent(Swal);
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { t, language } = useLanguage(); // Obter language do contexto
+  const { t } = useLanguage(); // Obter language do contexto
   const isActive = useSectionActive("contact");
   const [formData, setFormData] = useState({
     name: "",

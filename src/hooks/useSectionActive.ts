@@ -10,7 +10,6 @@ export function useSectionActive(sectionId: string) {
 
       const rect = section.getBoundingClientRect()
       const windowHeight = window.innerHeight
-      const sectionHeight = rect.height
       
       // Calcular quando a seção está no meio da tela
       const sectionTop = rect.top

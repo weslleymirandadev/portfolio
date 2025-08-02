@@ -81,7 +81,7 @@ export default function Projects() {
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3 text-aero">{t.projects.technologies}</h4>
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, techIndex) => (
+                  {project.tech.map((tech, _) => (
                     <span
                       key={tech}
                       className="px-2 py-0.5 bg-gray-700/50 text-gray-300 text-[10px] rounded-full border border-gray-600"

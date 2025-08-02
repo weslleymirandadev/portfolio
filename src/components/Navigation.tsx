@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [_, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { t, language, toggleLanguage } = useLanguage()
 

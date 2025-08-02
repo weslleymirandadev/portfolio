@@ -9,17 +9,6 @@ export default function About() {
   const { t } = useLanguage();
   const isActive = useSectionActive("about");
 
-  const skills = [
-    { name: "Next.js", level: 90, color: "bg-french-blue" },
-    { name: "React.js", level: 95, color: "bg-picton-blue" },
-    { name: "TypeScript", level: 85, color: "bg-aero" },
-    { name: "Node.js", level: 88, color: "bg-carrot-orange" },
-    { name: "Python", level: 82, color: "bg-persian-red" },
-    { name: "Blockchain", level: 85, color: "bg-french-blue" },
-    { name: "AI/ML", level: 80, color: "bg-picton-blue" },
-    { name: "Docker", level: 85, color: "bg-aero" },
-  ];
-
   return (
     <section
       ref={ref}
